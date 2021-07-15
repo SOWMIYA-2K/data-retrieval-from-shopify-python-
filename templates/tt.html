@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title></title>
+ <link rel="stylesheet" href="{{ url_for('static',    filename='css/style.css') }}">
+    
+</head>
+<body>
+    <div class="head">
+         <h1 >ORDERS</h1>
+    </div>
+<style>
+ 
+ td {
+        width: 350px;
+        text-align: center;
+        border: 2px solid black;
+        padding: 5px;
+      }
+</style>
+<table>
+  <thead>
+    <tr>
+        <th> ID</th>
+        <th>LIST OF ITEMS</th>
+        <th>CUSTOMER</th>
+        <th>TAGS</th>
+    </tr>
+    </thead>    
+    <tbody>
+     {% for row in data %}    
+            <tr>
+                <td>{{row[0]}}</td>
+                <td>{{row[1]}}</td>
+                <td>{{row[2]}}</td>
+                <td>{{row[3]}}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</body>
+</html>
+
